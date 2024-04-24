@@ -3,7 +3,7 @@
 Get-Help New-MgUser -Online
 
 $PasswordProfile = @{
-    Password = 'DemoPassword12345!'
+    Password = 'DemoPassword1234567!'
 }
 
 $Params = @{
@@ -25,7 +25,7 @@ New-MgUser @Params
 
 
 
-$users = Import-CSV -Path '03-02-Users.csv' -Delimiter ","
+$users = Import-CSV -Path  '/Users/sarah_monica/Desktop/TISIP-2024/Microsoft-365-PoweShell/Microsoft-365-PoweShell/03-02-Users.csv' -Delimiter ","
 
 $PasswordProfile = @{
     Password = 'DemoPassword12345!'
@@ -44,6 +44,8 @@ foreach ($user in $users) {
         Country           = $user.Country
         City              = $user.City
     }
+    
+    
     $Params
     New-MgUser @Params
 }
