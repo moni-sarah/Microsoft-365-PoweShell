@@ -4,7 +4,7 @@ $departement = @("HR", "IT", "SALES", "Marketing")
 foreach ($departement in $departement) {
     $membershiprule = "user.department -eq `"$departement`""
 
-    # Create M365 Group 
+    # Create M365Group 
     $Params = @{
         DisplayName                   = $departement
         Description                   = "Group for alle $departement"
